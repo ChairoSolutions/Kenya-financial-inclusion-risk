@@ -1,0 +1,15 @@
+{
+    "categorical": [
+        "County",
+        "location_type",
+        "gender",
+        "education_level",
+        "marital_status",
+        "adults"
+    ],
+    "numeric": [
+        "age",
+        "is_youth",
+        "is_rural_youth"
+    ]
+}
