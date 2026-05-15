@@ -31,8 +31,13 @@ The intended users of this project include:
 
 These users could apply the project insights to design better outreach strategies, improve financial products, and support underserved populations.
 
-## Data Sources
+## Data Understanding
 
+This project uses the **FinAccess 2021 Household Survey Microdata Excel Workbook** as the main dataset for exploring financial inclusion and exclusion among Kenyan adults. The notebook begins by inspecting the structure of the workbook, understanding available sheets, reviewing variable definitions, and identifying suitable variables for financial inclusion modelling.
+
+### Dataset Source
+
+The dataset is stored as an Excel
 The primary modeling dataset is:
 
 - **2021 FinAccess Household Survey Microdata**
