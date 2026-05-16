@@ -1,0 +1,8 @@
+{
+    "best_model": "Gradient Boosting",
+    "rows": 20902,
+    "features": 9,
+    "target_positive_rate": 0.17567696871112812,
+    "mean_cv_roc_auc": 0.8176950419318123,
+    "std_cv_roc_auc": 0.007642404456424021
+}
