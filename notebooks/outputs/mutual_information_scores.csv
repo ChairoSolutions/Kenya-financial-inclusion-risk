@@ -1,0 +1,75 @@
+Feature,MI Score
+num__age,0.048007020668576095
+cat__education_level_None ,0.026192355985792615
+cat__education_level_Don't know (DO NOT READ OUT),0.020691738893351852
+cat__County_Machakos,0.018985660126848325
+cat__County_Migori,0.016276191579983612
+cat__education_level_University completed ,0.016053960350138174
+cat__County_Kisumu,0.015749550986637217
+cat__County_Nakuru,0.015681682318087864
+cat__County_Trans Nzoia,0.014760440922812368
+cat__County_Marsabit,0.014639192200770035
+cat__County_Bungoma,0.014281707822478396
+cat__education_level_Primary completed,0.014276453923325327
+cat__education_level_Secondary completed ,0.014085537962958306
+cat__County_Bomet,0.01273979401107872
+cat__County_Isiolo,0.010557329341703836
+cat__County_Garissa,0.010223560439727386
+cat__education_level_Some secondary,0.010177445389389472
+cat__County_Turkana,0.009937011634599369
+cat__County_Murang'a,0.009298836999808824
+num__is_rural_youth,0.008469661349601587
+cat__County_Kiambu,0.007681694524832805
+cat__County_Uasin Gishu,0.007626106329510218
+cat__County_Embu,0.006181910289384751
+cat__education_level_Some technical training after secondary school,0.0059923442216478495
+cat__marital_status_Married/Living with partner,0.005592708497464294
+cat__County_Nyandarua,0.004781927413154863
+cat__County_Kajiado,0.004477231915826385
+cat__education_level_Refused to Answer (DO NOT READ OUT),0.004436329256267912
+cat__County_Makueni,0.004249704124801079
+cat__County_Kilifi,0.004243081507061319
+cat__County_Homabay,0.0035013256281382077
+cat__County_Kirinyaga,0.0030648569184088537
+cat__location_type_Urban,0.0029016871680938028
+cat__County_Tana River,0.0028365869715794023
+cat__County_Kwale,0.002312082505966817
+cat__County_Mombasa,0.0021510595593259296
+cat__education_level_Other (Specify) ,0.0018611211474013345
+cat__marital_status_Refused to Answer(DO NOT READ OUT),0.0015690941152457505
+cat__County_Kakamega,0.0012047926924405594
+cat__County_Kisii,0.0009874145284962665
+cat__education_level_Some primary ,0.00044874743314315957
+cat__County_Baringo,0.0
+cat__County_Busia,0.0
+cat__County_Elgeyo-Marakwet,0.0
+cat__County_Samburu,0.0
+cat__County_Taita-Taveta,0.0
+cat__County_Nyeri,0.0
+cat__County_Nandi,0.0
+cat__County_Narok,0.0
+cat__County_Siaya,0.0
+cat__County_Nairobi City,0.0
+cat__County_Laikipia,0.0
+cat__County_Kitui,0.0
+cat__County_Kericho,0.0
+cat__County_Lamu,0.0
+cat__County_Meru,0.0
+cat__County_Mandera,0.0
+cat__County_Nyamira,0.0
+cat__County_Tharaka-Nithi,0.0
+cat__education_level_Completed technical training after secondary school,0.0
+cat__location_type_Rural,0.0
+cat__gender_Male,0.0
+cat__County_Wajir,0.0
+cat__County_West Pokot,0.0
+cat__gender_Female,0.0
+cat__County_Vihiga,0.0
+cat__marital_status_Don't know   (DO NOT READ OUT),0.0
+cat__marital_status_Divorced/separated,0.0
+cat__education_level_Some university,0.0
+cat__marital_status_Single/Never Married,0.0
+cat__adults_1 adult Household,0.0
+cat__marital_status_Widowed,0.0
+cat__adults_>1 adult Household,0.0
+num__is_youth,0.0
