@@ -3,6 +3,6 @@
     "rows": 20902,
     "features": 9,
     "target_positive_rate": 0.17567696871112812,
-    "mean_cv_roc_auc": 0.8176950419318123,
-    "std_cv_roc_auc": 0.007642404456424021
+    "mean_cv_roc_auc": 0.817692830948754,
+    "std_cv_roc_auc": 0.00764512293894378
 }
