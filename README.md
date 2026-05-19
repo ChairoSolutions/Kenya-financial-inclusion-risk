@@ -1,63 +1,256 @@
-# Kenya-financial-inclusion-risk
-Machine learning project using Kenya FinAccess data to predict, explain and map financial exclusion risk.
-# Kenya Financial Inclusion Risk Prediction
+# Financial Inclusion Risk Analysis Using FinAccess 2021 Microdata
 
 ## Project Overview
 
-This project focuses on financial inclusion in Kenya. Although Kenya is widely known for mobile money and digital financial innovation, some adults still remain excluded from formal and informal financial services such as banks, SACCOs, insurance, pensions, mobile banking, savings products, and regulated credit.
+This project focuses on analysing and predicting financial exclusion risk among Kenyan adults using the FinAccess 2021 Household Survey microdata.
 
-Our goal is to build a machine learning project that helps identify Kenyan adults who are most at risk of financial exclusion. The project will also explain the factors behind that risk, analyze county-level and subgroup patterns, compare 2021 findings with 2024 FinAccess trends, and deploy the final model through a Flask web application.
+Although Kenya is globally recognised for the success of mobile money services, a significant proportion of the population still lacks access to formal financial services such as:
+- Banking services
+- Insurance products
+- SACCO services
+- Pension schemes
+- Regulated credit facilities
 
-## Business Problem
+The project aims to:
+- Identify individuals at risk of financial exclusion
+- Understand the major factors contributing to exclusion
+- Analyse exclusion patterns across demographic and geographic groups
+- Develop predictive models for financial exclusion risk
 
-Financial exclusion limits people’s ability to save, borrow, receive payments, manage emergencies, build businesses, and participate fully in the economy.
+---
 
-The main business question is:
+# Problem Statement
 
-**Can we predict which Kenyan adults are most at risk of financial exclusion, explain why they are at risk, and identify where exclusion is concentrated across counties and vulnerable groups?**
+Financial exclusion limits access to:
+- Credit
+- Savings
+- Insurance
+- Investment opportunities
+- Economic growth opportunities
 
-## Target Audience
-
-The intended users of this project include:
-
-- Banks
+Understanding the drivers of financial exclusion can help:
+- Financial institutions
+- Policy makers
 - Fintech companies
-- SACCOs
-- Microfinance institutions
-- NGOs and development organizations
-- Policymakers
-- County governments
-- Financial inclusion researchers
+- Development organisations
 
-These users could apply the project insights to design better outreach strategies, improve financial products, and support underserved populations.
+design targeted interventions that improve financial inclusion across Kenya.
 
-## Data Understanding
+---
 
-This project uses the **FinAccess 2021 Household Survey Microdata Excel Workbook** as the main dataset for exploring financial inclusion and exclusion among Kenyan adults. The notebook begins by inspecting the structure of the workbook, understanding available sheets, reviewing variable definitions, and identifying suitable variables for financial inclusion modelling.
+# Objectives
 
-### Dataset Source
+The main objectives of this project are to:
 
-The dataset is stored as an Excel
-The primary modeling dataset is:
+1. Explore and understand the FinAccess 2021 dataset
+2. Identify key demographic and socioeconomic variables
+3. Clean and preprocess the survey data
+4. Create a financial exclusion target variable
+5. Analyse financial inclusion patterns
+6. Build predictive machine learning models
+7. Evaluate model performance
+8. Explain model predictions using explainable AI techniques
+9. Develop a financial exclusion risk application
 
-- **2021 FinAccess Household Survey Microdata**
-  - Source: Kenya National Bureau of Statistics / FinAccess
-  - Used for supervised machine learning and subgroup analysis
+---
 
-Supporting sources include:
+# Dataset Description
 
-- **2024 FinAccess Household Survey Report**
-  - Used for trend comparison and current business context
+## Dataset Source
+The project uses the:
+- FinAccess 2021 Household Survey Microdata
 
-- **FinAccess Dashboard**
-  - Used for context, validation, and interpretation of national/county patterns
+Additional reference material:
+- FinAccess 2024 Report
+- FinAccess Dashboard
 
-## Machine Learning Problem
+---
 
-This is a supervised machine learning classification problem.
+# Dataset Structure
 
-The target variable will be:
+The Excel workbook contains three major sheets:
 
-```text
-1 = financially_excluded
-0 = financially included
+| Sheet Name | Description |
+|---|---|
+| Dataset | Main survey responses |
+| Variable Information | Variable descriptions and labels |
+| Variable Values | Decoding for coded survey responses |
+
+---
+
+# Unit of Analysis
+
+The unit of analysis is an individual survey respondent interviewed during the FinAccess 2021 survey.
+
+---
+
+# Key Variable Categories
+
+The dataset contains variables related to:
+
+## Demographic Information
+- Age
+- Gender
+- Marital status
+- Education level
+- Household size
+
+## Geographic Information
+- County
+- Region
+- Rural or urban residence
+
+## Socioeconomic Information
+- Occupation
+- Employment status
+- Income level
+- Asset ownership
+
+## Financial Inclusion Indicators
+- Banking usage
+- Mobile money usage
+- Savings behaviour
+- Insurance access
+- Credit access
+- SACCO membership
+
+---
+
+# Data Exploration
+
+The project includes exploratory analysis such as:
+- Dataset structure inspection
+- Variable dictionary creation
+- Missing value analysis
+- Duplicate row detection
+- Feature type analysis
+- Target balance analysis
+
+---
+
+# Target Variable
+
+The project creates a binary target variable:
+
+| Value | Meaning |
+|---|---|
+| 1 | Financially Excluded |
+| 0 | Financially Included |
+
+The target is derived using financial access indicators from the dataset.
+
+---
+
+# Target Leakage Considerations
+
+Certain variables directly reveal financial inclusion status and may cause target leakage.
+
+Examples include:
+- Banking usage variables
+- Mobile money usage variables
+- Insurance usage variables
+- Formal financial access indicators
+
+These variables are excluded from predictive modelling where necessary.
+
+---
+
+# Machine Learning Models
+
+The following machine learning models will be explored:
+
+- Logistic Regression
+- Decision Tree
+- Random Forest
+- Gradient Boosting
+- XGBoost
+
+---
+
+# Explainable AI
+
+The project will use SHAP (SHapley Additive Explanations) to:
+- explain model predictions,
+- identify important variables,
+- improve interpretability.
+
+---
+
+# Planned Outputs
+
+The project aims to produce:
+- Cleaned modelling dataset
+- Exploratory analysis notebook
+- Machine learning models
+- Explainability visualisations
+- County-level risk analysis
+- Flask web application
+- Dashboard visualisations
+
+---
+
+# Technologies Used
+
+## Programming Language
+- Python
+
+## Libraries
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- scikit-learn
+- xgboost
+- shap
+- openpyxl
+
+---
+
+# Project Workflow
+
+1. Load dataset
+2. Explore workbook sheets
+3. Create variable dictionary
+4. Decode survey values
+5. Perform data quality checks
+6. Create target variable
+7. Clean and preprocess data
+8. Perform exploratory data analysis
+9. Train machine learning models
+10. Evaluate models
+11. Apply explainability techniques
+12. Build deployment application
+
+---
+
+# Data Quality Checks
+
+The following checks are performed:
+- Missing values
+- Duplicate rows
+- Feature types
+- Target balance
+
+These checks help ensure the dataset is suitable for modelling.
+
+---
+
+# Expected Impact
+
+This project may help:
+- identify financially vulnerable populations,
+- support financial inclusion strategies,
+- improve targeted interventions,
+- guide policy and fintech innovation in Kenya.
+
+---
+
+# Author
+
+Ainsley Nyambura Gichimu
+
+---
+
+# License
+
+This project is for educational and analytical purposes.
