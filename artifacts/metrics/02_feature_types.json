@@ -10,6 +10,6 @@
     "numeric": [
         "age",
         "is_youth",
-        "is_rural_youth"
+        "is_rural_youthis_female_youth"
     ]
 }
