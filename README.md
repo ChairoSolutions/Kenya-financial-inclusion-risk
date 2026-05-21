@@ -1,4 +1,4 @@
-# Financial Inclusion Risk Analysis Using FinAccess 2021 Microdata
+# Kenya Financial Inclusion Risk Prediction
 
 ## Project Overview
 
@@ -231,9 +231,14 @@ The following checks are performed:
 - Feature types
 - Target balance
 
-These checks help ensure the dataset is suitable for modelling.
+## Data Understanding
 
----
+This project uses the **FinAccess 2021 Household Survey Microdata Excel Workbook** as the main dataset for exploring financial inclusion and exclusion among Kenyan adults. The notebook begins by inspecting the structure of the workbook, understanding available sheets, reviewing variable definitions, and identifying suitable variables for financial inclusion modelling.
+
+### Dataset Source
+
+The dataset is stored as an Excel
+The primary modeling dataset is:
 
 # Expected Impact
 
@@ -253,4 +258,6 @@ Ainsley Nyambura Gichimu
 
 # License
 
-This project is for educational and analytical purposes.
+```text
+1 = financially_excluded
+0 = financially included
