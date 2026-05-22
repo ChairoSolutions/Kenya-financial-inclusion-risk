@@ -59,3 +59,21 @@ The target variable will be:
 ```text
 1 = financially_excluded
 0 = financially included
+
+```
+
+## Data Preparation
+
+The data preparation process transformed the raw 2021 FinAccess household survey dataset into a clean, leakage-controlled modeling dataset suitable for exploratory analysis and machine learning. The workflow began by reloading the raw survey data independently to ensure notebook reproducibility.
+
+A binary target variable, `financially_excluded`, was engineered from the `excluded_informal_banked2022` column, where respondents classified as “Excluded” were mapped to 1 and those categorized as “Banked” or “Other Formal” were mapped to 0. To reduce target leakage, variables directly related to financial access, including banking usage, mobile money, loans, savings, SACCO participation, insurance, and other formal or informal financial service indicators, were identified and excluded from the structural-risk modeling dataset.
+ 
+Administrative and identifier-related columns such as interview IDs and household identifiers were also removed to prevent overfitting. A small set of safe demographic and socioeconomic predictors was then selected, including county, rural/urban status, gender, age, education level, marital status, and household composition. 
+  
+Additional interpretable features such as youth status, rural youth status, and female-rural indicators were engineered to capture structural vulnerability patterns associated with financial exclusion.
+  
+Missing values were assessed and found to be negligible within the selected modeling variables, while class imbalance in the target variable was validated and visualized for downstream modeling awareness.
+   
+The dataset was further cleaned by restricting the modeling population to respondents aged 18–100 years to improve deployment realism and demographic consistency. Finally, cleaned datasets, feature metadata, leakage review artifacts, feature-type definitions, and reproducibility files were exported for downstream exploratory analysis and machine learning workflows.
+
+
