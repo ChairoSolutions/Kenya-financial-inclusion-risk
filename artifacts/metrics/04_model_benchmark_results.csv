@@ -1,0 +1,6 @@
+Model,Accuracy,Precision,Recall,F1
+Baseline Dummy,0.791,0.0,0.0,0.0
+Logistic Regression,0.736,0.424,0.744,0.54
+Random Forest,0.753,0.44,0.679,0.534
+Gradient Boosting,0.827,0.699,0.296,0.416
+XGBoost,0.829,0.682,0.338,0.452
