@@ -458,4 +458,88 @@ Missing values were assessed and found to be negligible within the selected mode
    
 The dataset was further cleaned by restricting the modeling population to respondents aged 18–100 years to improve deployment realism and demographic consistency. Finally, cleaned datasets, feature metadata, leakage review artifacts, feature-type definitions, and reproducibility files were exported for downstream exploratory analysis and machine learning workflows.
 
+# Model Deployment
 
+## Deployment Overview
+
+After completing data preparation, feature engineering, and model evaluation, the final stage of the project focused on deploying the machine learning model into a functional web application using Flask.
+
+The purpose of deployment was to transform the trained model from a notebook-based solution into an interactive application capable of generating predictions from new user input in real time.
+
+The deployed system allows users to:
+- Submit financial and demographic information
+- Process the input through the trained machine learning pipeline
+- Generate financial inclusion risk predictions instantly
+- Classify users into interpretable risk tiers
+
+---
+
+## Deployment Architecture
+
+The deployment workflow consists of:
+
+1. Loading the trained machine learning pipeline
+2. Loading saved feature columns used during model training
+3. Capturing user input through a Flask application
+4. Converting the input into a structured dataframe
+5. Passing the processed data into the trained model
+6. Generating prediction probabilities
+7. Assigning financial inclusion risk categories
+8. Returning prediction results through the application interface
+
+---
+
+## Technologies Used
+
+The deployment environment was built using:
+
+- Python
+- Flask
+- Pandas
+- Scikit-learn
+- Joblib
+- HTML/CSS
+
+---
+
+## Risk Classification Logic
+
+The application assigns users into three financial inclusion risk categories based on predicted probabilities:
+
+| Probability Range | Risk Tier |
+|---|---|
+| Below 0.40 | Low Risk |
+| 0.40 – 0.69 | Medium Risk |
+| 0.70 and above | High Risk |
+
+This approach improves interpretability for stakeholders by translating prediction probabilities into understandable business categories.
+
+---
+
+## Running the Application Locally
+
+To start the Flask application locally:
+
+```bash
+python app.py
+```
+
+The application runs on:
+
+```bash
+http://127.0.0.1:5000/
+```
+
+---
+
+## Project Value
+
+Deploying the model demonstrates how machine learning solutions can move beyond experimentation into practical business applications.
+
+The deployed application provides:
+- Faster prediction generation
+- Improved accessibility for non-technical users
+- Consistent financial inclusion risk assessment
+- A foundation for future production-level deployment
+
+This stage completes the end-to-end machine learning workflow by connecting data science development with real-world usability.
