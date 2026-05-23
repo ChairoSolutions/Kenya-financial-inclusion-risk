@@ -1,58 +1,75 @@
-# Kenya-financial-inclusion-risk
-Machine learning project using Kenya FinAccess data to predict, explain and map financial exclusion risk.
+# Explainability & Interpretability Analysis
 # Kenya Financial Inclusion Risk Prediction
 
-## Project Overview
+## Overview
 
-This project focuses on financial inclusion in Kenya. Although Kenya is widely known for mobile money and digital financial innovation, some adults still remain excluded from formal and informal financial services such as banks, SACCOs, insurance, pensions, mobile banking, savings products, and regulated credit.
+Following the model training and evaluation stages, this phase focused on explainability and interpretability analysis for financial exclusion prediction in Kenya.
 
-Our goal is to build a machine learning project that helps identify Kenyan adults who are most at risk of financial exclusion. The project will also explain the factors behind that risk, analyze county-level and subgroup patterns, compare 2021 findings with 2024 FinAccess trends, and deploy the final model through a Flask web application.
+The objective was to understand how the trained Gradient Boosting model makes predictions and identify the key drivers of financial exclusion risk.
 
-## Business Problem
+The analysis applied:
+- SHAP (SHapley Additive Explanations)
+- Permutation Importance
+- Mutual Information
+- Feature Importance Analysis
 
-Financial exclusion limits people’s ability to save, borrow, receive payments, manage emergencies, build businesses, and participate fully in the economy.
+These methods improved model transparency and connected predictions to real-world financial inclusion challenges.
 
-The main business question is:
 
-**Can we predict which Kenyan adults are most at risk of financial exclusion, explain why they are at risk, and identify where exclusion is concentrated across counties and vulnerable groups?**
+## Key Findings
 
-## Target Audience
+The explainability analysis identified important predictors of financial exclusion risk, including:
+- Education level
+- Age
+- County
+- Rural location
 
-The intended users of this project include:
+SHAP analysis showed that geographic inequality and lower education levels were strongly associated with higher exclusion risk.
 
-- Banks
-- Fintech companies
-- SACCOs
-- Microfinance institutions
-- NGOs and development organizations
-- Policymakers
-- County governments
-- Financial inclusion researchers
+Permutation Importance and Mutual Information analysis confirmed the importance of demographic and geographic variables in prediction performance.
 
-These users could apply the project insights to design better outreach strategies, improve financial products, and support underserved populations.
 
-## Data Sources
+## Why Explainability Matters
 
+Explainability helps users understand:
+- Why predictions were made
+- Which features influenced outcomes
+- Whether the model is fair and reliable
+## Data Understanding
+
+This project uses the **FinAccess 2021 Household Survey Microdata Excel Workbook** as the main dataset for exploring financial inclusion and exclusion among Kenyan adults. The notebook begins by inspecting the structure of the workbook, understanding available sheets, reviewing variable definitions, and identifying suitable variables for financial inclusion modelling.
+
+### Dataset Source
+
+The dataset is stored as an Excel
 The primary modeling dataset is:
 
-- **2021 FinAccess Household Survey Microdata**
-  - Source: Kenya National Bureau of Statistics / FinAccess
-  - Used for supervised machine learning and subgroup analysis
+This improves transparency, trust and decision-making in financial inclusion systems.
 
-Supporting sources include:
 
-- **2024 FinAccess Household Survey Report**
-  - Used for trend comparison and current business context
+## Business & Policy Insights
 
-- **FinAccess Dashboard**
-  - Used for context, validation, and interpretation of national/county patterns
+The findings suggest that financial exclusion in Kenya is influenced by structural and socio-economic barriers.
 
-## Machine Learning Problem
+The insights generated from this analysis can support:
+- Financial literacy programs
+- Rural banking expansion
+- Digital financial inclusion initiatives
+- Youth-focused financial services
 
-This is a supervised machine learning classification problem.
 
-The target variable will be:
+## Contribution
 
+This phase contributed:
+- SHAP explainability analysis
+- Feature importance evaluation
+- Business interpretation of model findings
+- Exported explainability outputs for reporting and future Flask integration
+
+
+## Conclusion
+
+This stage transformed the machine learning model into a more transparent and explainable financial inclusion tool by connecting predictions to meaningful real-world insights.
 ```text
 1 = financially_excluded
 0 = financially included
