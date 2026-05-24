@@ -1,0 +1,8 @@
+feature,reason
+County,captures geographic inequality
+location_type,captures rural/urban vulnerability
+gender,captures demographic disparities
+raw_age,captures lifecycle financial vulnerability
+education_level,captures socioeconomic capability
+marital_status,captures household structure
+adults,captures household composition
