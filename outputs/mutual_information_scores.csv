@@ -1,0 +1,75 @@
+Feature,MI Score
+cat__marital_status_Married/Living with partner,0.0479309854245491
+num__age,0.04535820884369657
+cat__County_Garissa,0.025317730155348883
+cat__County_Bomet,0.02068547819352884
+cat__County_Tana River,0.02031832633466646
+cat__County_Nyandarua,0.019018935702508566
+cat__education_level_Secondary completed ,0.018451098081549766
+cat__County_Laikipia,0.018432371991389696
+cat__location_type_Rural,0.017518337884007362
+cat__marital_status_Widowed,0.015404221116664285
+cat__County_Embu,0.014172814283978097
+cat__education_level_None ,0.013520558715193198
+cat__County_Narok,0.012873976652160835
+cat__County_Isiolo,0.01269691354996949
+cat__County_Kakamega,0.01160151506334417
+cat__education_level_Some primary ,0.011427412625515387
+cat__gender_Male,0.010860113127075355
+cat__County_Elgeyo-Marakwet,0.010827978384635673
+cat__County_Tharaka-Nithi,0.010745497587125952
+cat__gender_Female,0.010648452945736686
+cat__education_level_Other (Specify) ,0.00959614471564385
+cat__marital_status_Refused to Answer(DO NOT READ OUT),0.008403599089756408
+cat__County_Kiambu,0.007621567239264548
+cat__education_level_Refused to Answer (DO NOT READ OUT),0.007173741422586755
+cat__location_type_Urban,0.006760196907826366
+cat__County_Migori,0.006432913645740834
+cat__County_Kitui,0.006358988105762409
+cat__County_Bungoma,0.005852072064489899
+cat__County_Turkana,0.004792381442768168
+cat__County_Siaya,0.004763864172248278
+cat__marital_status_Divorced/separated,0.00398573192907592
+cat__education_level_Some secondary,0.003961942335726443
+cat__County_Kericho,0.00393879144274023
+cat__County_Vihiga,0.0029116818678780465
+cat__County_Nyamira,0.0028091227297120103
+cat__County_Meru,0.0027395246355317315
+cat__County_Kirinyaga,0.0026149156324077882
+cat__education_level_Completed technical training after secondary school,0.0017335872309365286
+cat__marital_status_Single/Never Married,0.001472118632681374
+cat__County_Murang'a,0.0013115425233396483
+cat__County_Busia,0.0009508385531435959
+cat__County_Uasin Gishu,0.0008336392112655577
+cat__County_Kajiado,0.0
+cat__County_Homabay,0.0
+cat__County_Baringo,0.0
+cat__County_Trans Nzoia,0.0
+cat__County_Nairobi City,0.0
+cat__County_Mombasa,0.0
+cat__County_Nandi,0.0
+cat__County_Nakuru,0.0
+cat__County_Kisumu,0.0
+cat__County_Kisii,0.0
+cat__County_Lamu,0.0
+cat__County_Kwale,0.0
+cat__County_Machakos,0.0
+cat__County_Makueni,0.0
+cat__County_Mandera,0.0
+cat__County_Marsabit,0.0
+cat__County_Kilifi,0.0
+cat__County_Taita-Taveta,0.0
+cat__County_Nyeri,0.0
+cat__County_Samburu,0.0
+cat__education_level_Primary completed,0.0
+cat__education_level_Don't know (DO NOT READ OUT),0.0
+cat__County_Wajir,0.0
+cat__County_West Pokot,0.0
+cat__marital_status_Don't know   (DO NOT READ OUT),0.0
+cat__education_level_University completed ,0.0
+cat__education_level_Some technical training after secondary school,0.0
+cat__education_level_Some university,0.0
+cat__adults_1 adult Household,0.0
+cat__adults_>1 adult Household,0.0
+num__is_youth,0.0
+num__is_rural_youth,0.0
