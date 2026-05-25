@@ -6,7 +6,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
 
-MODEL_PATH = BASE_DIR / "models" / "financial_exclusion_gradient_boosting_pipeline.joblib"
+MODEL_PATH = BASE_DIR / "models" / "financial_exclusion_logistic_regression_pipeline.joblib"
 FEATURE_COLUMNS_PATH = BASE_DIR / "artifacts" / "metrics" / "04_feature_columns.json"
 
 model = joblib.load(MODEL_PATH)
