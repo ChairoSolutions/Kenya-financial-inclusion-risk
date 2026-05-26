@@ -1,0 +1,12 @@
+[
+    "County",
+    "location_type",
+    "gender",
+    "raw_age",
+    "education_level",
+    "marital_status",
+    "adults",
+    "age",
+    "is_youth",
+    "is_rural_youth"
+]
