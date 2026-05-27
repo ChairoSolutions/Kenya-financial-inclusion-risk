@@ -63,15 +63,54 @@ st.subheader("Enter Respondent Information")
 County = st.selectbox(
     "County",
     [
-        "Nairobi", "Mombasa", "Kisumu", "Nakuru", "Kiambu",
-        "Uasin Gishu", "Machakos", "Kakamega", "Meru", "Nyeri",
-        "Kajiado", "Kilifi", "Bungoma", "Kisii", "Other"
+        "Baringo",
+        "Bomet",
+        "Bungoma",
+        "Busia",
+        "Elgeyo-Marakwet",
+        "Embu",
+        "Garissa",
+        "Homa Bay",
+        "Isiolo",
+        "Kajiado",
+        "Kakamega",
+        "Kericho",
+        "Kiambu",
+        "Kilifi",
+        "Kirinyaga",
+        "Kisii",
+        "Kisumu",
+        "Kitui",
+        "Kwale",
+        "Laikipia",
+        "Lamu",
+        "Machakos",
+        "Makueni",
+        "Mandera",
+        "Marsabit",
+        "Meru",
+        "Migori",
+        "Mombasa",
+        "Murang'a",
+        "Nairobi",
+        "Nakuru",
+        "Nandi",
+        "Narok",
+        "Nyamira",
+        "Nyandarua",
+        "Nyeri",
+        "Samburu",
+        "Siaya",
+        "Taita Taveta",
+        "Tana River",
+        "Tharaka-Nithi",
+        "Trans Nzoia",
+        "Turkana",
+        "Uasin Gishu",
+        "Vihiga",
+        "Wajir",
+        "West Pokot"
     ]
-)
-
-location_type = st.selectbox(
-    "Location Type",
-    ["Urban", "Rural"]
 )
 
 gender = st.selectbox(
