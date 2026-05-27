@@ -4,6 +4,10 @@ import joblib
 import json
 from pathlib import Path
 
+# -----------------------------
+# Load model and feature columns
+# -----------------------------
+
 BASE_DIR = Path(__file__).resolve().parent
 
 MODEL_PATH = BASE_DIR / "models" / "financial_exclusion_gradient_boosting_pipeline.joblib"
@@ -14,6 +18,11 @@ model = joblib.load(MODEL_PATH)
 with open(FEATURE_COLUMNS_PATH, "r") as f:
     feature_columns = json.load(f)
 
+
+# -----------------------------
+# Helper function
+# -----------------------------
+
 def assign_risk_tier(prob):
     if prob < 0.40:
         return "Low Risk"
@@ -22,6 +31,16 @@ def assign_risk_tier(prob):
     else:
         return "High Risk"
 
+
+# -----------------------------
+# App layout
+# -----------------------------
+
+st.set_page_config(
+    page_title="Kenya Financial Exclusion Risk Predictor",
+    layout="centered"
+)
+
 st.title("Kenya Financial Exclusion Risk Predictor")
 
 st.write(
@@ -29,26 +48,91 @@ st.write(
     "based on demographic and socioeconomic inputs."
 )
 
-gender = st.selectbox("Gender", ["Male", "Female"])
-settlement_type = st.selectbox("Settlement Type", ["Urban", "Rural"])
-education_level = st.selectbox("Education Level", ["Primary", "Secondary", "Tertiary"])
-employment_status = st.selectbox("Employment Status", ["Employed", "Unemployed"])
+st.info(
+    "The model uses 9 features: County, location type, gender, education level, "
+    "marital status, adults, age, youth status, and rural-youth status."
+)
+
+
+# -----------------------------
+# User input form
+# -----------------------------
+
+st.subheader("Enter Respondent Information")
+
+County = st.selectbox(
+    "County",
+    [
+        "Nairobi", "Mombasa", "Kisumu", "Nakuru", "Kiambu",
+        "Uasin Gishu", "Machakos", "Kakamega", "Meru", "Nyeri",
+        "Kajiado", "Kilifi", "Bungoma", "Kisii", "Other"
+    ]
+)
+
+location_type = st.selectbox(
+    "Location Type",
+    ["Urban", "Rural"]
+)
+
+gender = st.selectbox(
+    "Gender",
+    ["Male", "Female"]
+)
+
+education_level = st.selectbox(
+    "Education Level",
+    ["No education", "Primary", "Secondary", "Tertiary"]
+)
+
+marital_status = st.selectbox(
+    "Marital Status",
+    ["Single", "Married", "Divorced/Separated", "Widowed"]
+)
+
+adults = st.number_input(
+    "Number of Adults in Household",
+    min_value=1,
+    max_value=20,
+    value=2,
+    step=1
+)
+
+age = st.number_input(
+    "Age",
+    min_value=18,
+    max_value=100,
+    value=30,
+    step=1
+)
+
+is_youth = 1 if age <= 35 else 0
+is_rural_youth = 1 if location_type == "Rural" and is_youth == 1 else 0
+
+st.write(f"Auto-calculated youth status: **{is_youth}**")
+st.write(f"Auto-calculated rural-youth status: **{is_rural_youth}**")
+
+
+# -----------------------------
+# Prediction
+# -----------------------------
 
 if st.button("Predict Financial Exclusion Risk"):
 
     input_data = {
+        "County": County,
+        "location_type": location_type,
         "gender": gender,
-        "settlement_type": settlement_type,
         "education_level": education_level,
-        "employment_status": employment_status
+        "marital_status": marital_status,
+        "adults": adults,
+        "age": age,
+        "is_youth": is_youth,
+        "is_rural_youth": is_rural_youth
     }
 
     input_df = pd.DataFrame([input_data])
 
-    for col in feature_columns:
-        if col not in input_df.columns:
-            input_df[col] = None
-
+    # Ensure exact training column order
     input_df = input_df[feature_columns]
 
     prediction = model.predict(input_df)[0]
@@ -57,6 +141,20 @@ if st.button("Predict Financial Exclusion Risk"):
 
     st.subheader("Prediction Result")
 
-    st.write("Prediction:", "Financially Excluded" if prediction == 1 else "Financially Included")
-    st.write("Exclusion Probability:", f"{probability * 100:.2f}%")
-    st.write("Risk Tier:", risk_tier)
+    st.metric(
+        "Prediction",
+        "Financially Excluded" if prediction == 1 else "Financially Included"
+    )
+
+    st.metric(
+        "Exclusion Probability",
+        f"{probability * 100:.2f}%"
+    )
+
+    st.metric(
+        "Risk Tier",
+        risk_tier
+    )
+
+    st.write("Input sent to model:")
+    st.dataframe(input_df)
