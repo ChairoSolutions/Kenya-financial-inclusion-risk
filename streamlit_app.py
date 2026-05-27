@@ -113,6 +113,11 @@ County = st.selectbox(
     ]
 )
 
+location_type = st.selectbox(
+    "Location Type",
+    ["Urban", "Rural"]
+)
+
 gender = st.selectbox(
     "Gender",
     ["Male", "Female"]
