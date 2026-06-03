@@ -73,7 +73,20 @@ Dataset source:
 - Kenya National Bureau of Statistics (KNBS)
 - FinAccess Household Survey
 
+## Data Access
 
+The original FinAccess 2021 microdata file
+(finaccess_2021_microdata.xlsx) is approximately 193 MB and is not
+included in this repository due to GitHub size limitations.
+
+The processed modeling dataset used in experimentation is provided in:
+
+Data/Processed/finaccess_2021_modeling_base.csv
+
+To reproduce the full pipeline, obtain the FinAccess 2021 microdata
+from the official source (https://statistics.knbs.or.ke/nada/index.php/catalog/104) and place it in:
+
+Data/Raw/
 
 # Dataset Structure
 

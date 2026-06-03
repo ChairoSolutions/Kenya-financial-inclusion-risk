@@ -1,1 +1,8 @@
-Data/
+# Ignore raw data
+Data/Raw/
+
+# Track processed data
+!Data/Processed/
+
+# Keep processed CSVs
+!Data/Processed/*.csv
