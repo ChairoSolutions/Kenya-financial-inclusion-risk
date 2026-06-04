@@ -6,3 +6,4 @@ Data/Raw/
 
 # Keep processed CSVs
 !Data/Processed/*.csv
+Data/Processed/financial_inclusion_model_df.csv
